@@ -1,11 +1,7 @@
     * {
         font-family: 'Times New Roman', Times, serif;
-        background-image: url("../images/back.png");
+        background-image: url("https://turtogtokh863.github.io/wap.github.io/images/back.png");
         background-repeat: repeat;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
     }
     
     .movieDetails {
@@ -29,6 +25,15 @@
         align-content: center;
         margin-left: 40px;
         text-overflow: ellipsis;
+    }
+    .other_stuff{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+font-style: italic;
+        margin-left: 40px;
+        text-decoration-color: blue;
+        border-bottom: rgb(127, 255, 0);
+        border-bottom-style: dotted;
     }
     
     h2::first-letter {
