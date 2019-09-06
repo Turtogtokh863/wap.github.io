@@ -4,13 +4,17 @@
    </head>
    <body>
       <script type="text/javascript">
+
         function max(firstNum,secondNum){
+            let max = 0;
             if(firstNum>secondNum){
+                max = firstNum;
                 console.log(firstNum + "is max Number.");
             } else {
+                max = secondNum;
                 console.log(secondNum + "is max Number.");
             }
-            return;
+            return max;
         }
 
         max(142,3);
