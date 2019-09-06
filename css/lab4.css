@@ -12,6 +12,10 @@ textarea {
     width: 563px;
     height: 150px;
 }
+text{
+    width: 563px;
+    height: 150px;
+}
 
 
 h2{
@@ -52,18 +56,27 @@ h2{
 }
 
 .container {
-    background-color: #24d35985;
+    background-color: #ffffffad;
     padding: 3px 18px 13px 18px;
     border: 1px solid rgb(88, 77, 235);
     border-radius: 3px;
 }
-
+.first {
+    background-color: #646cd8;
+    padding: 3px 18px 13px 18px;
+    border: 1px solid rgb(88, 77, 235);
+    border-radius: 3px;
+}
 input[type=text] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 3px;
+}
+select{
+    width: 563px;
+    height: 50px;
 }
 
 label {
@@ -78,7 +91,7 @@ label {
 }
 
 .btn {
-    background-color: #a0e25e;
+    background-color: #064d0b;
     color: white;
     padding: 12px;
     margin: 10px 0;
