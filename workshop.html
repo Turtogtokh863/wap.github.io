@@ -1,96 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/lab4.css">
-
+    <meta charset="utf-8">
+    <link href="css/lab4.css" type="text/css" rel="stylesheet"/>
+    <title></title>
 </head>
+
 <body>
-    <div class="row">
-        <div class="col-25">
-        <h2>Workshop Registration</h2>
+<form action="" method="">
+    <header id="head">
+        <div id="headdiv"><span>Workshop Registration</span>
+            <select id="select1" value="More Actions" >
+                <option >More Actions</option>
+            </select>
+            </div>
+    </header>
+    <nav>
+        <p class="subtitle">Register now while seats are available!</p>
+    </nav>
+    <section>
+        <div id="leftdiv">
+            <label class="text l1">First Name <span class="colorStar">*</span>          </label><input type="text" >
+            <label class="text l2">Last Name <span class="colorStar">*</span>           </label><input type="text" >
+            <label class="text l3">Company/Institution <span class="colorStar">*</span> </label><input type="text" >
+            <label class="text l4">Address <span class="colorStar">*</span>            </label><textarea></textarea>
+            <label class="text l5">City                  </label><input type="text" >
+            <label class="text l6">State/Province/Region </label>
+            <select value="-select-">
+                <option ></option>
+            </select>
+            <label class="text">Country</label><input type="text" >
+            <label class="text">Email</label><input type="text" >
         </div>
-            <div class="col-25">
-                <label>More Actions</label>
+        <div id="rightdiv">
+            <p class="subtitle">Lunch</p>
+            <br>
+            <label class="text l1">Meal preference</label>
+            <select>
+                <option ></option>
+            </select>
+            <p class="subtitle">Payment Details</p>
+            <br>
+
+            <label class="text l2">Payment Mode</label>
+            <div id="paymode" >
+                <label><input  class="paybox" type="checkbox" />Cash</label><br/>
+                <label><input  class="paybox" type="checkbox" />Cheque</label><br/>
+                <label><input  class="paybox" type="checkbox" />Draft</label><br/>
+            </div>
+
+            <label class="text l3">DD/Cheque No. </label><input type="text" >
+            <label class="text l4">Drawn On (Bank Name)</label><input type="text" >
+            <label class="text l5">Payable at</label><input type="text" >
+
         </div>
-    </div>
-</div>
+        <div>
 
-
-<div class="row">
-    <div class="col-75">
-        <div class="container">
-                <div class="row">
-                    <div class="col-50">
-                        <h3><ins>Register now while seats are available!</ins></h3>
-                        <div class="fname" style="display: flex">
-                            <label>Firstname<span class="colorStar">*</span></label>
-                            <input type="text" required/>
-                        </div>
-                        <div class="lname" style="display: flex">
-                            <label>Lastname<span class="colorStar">*</span></label>
-                            <input type="text" required/>
-                        </div>
-                        <div class="company"style="display: flex">
-                            <label>Company/Institute<span class="colorStar">*</span></label>
-                            <input type="text" required/>
-                        </div>
-                        <div class="address" style="display: flex">
-                            <label>Address<span class="colorStar">*</span></label>
-                            <textarea type="text" name="address" ></textarea><br><br>
-                        </div>
-                        <div class="city">
-                            <label>City</label>
-                            <input type="text" id="city" name="city" >
-                        </div>
-                        <div class="state">
-                                <label>State/Province/Region</label>
-                                <select><option>-Select-</option></select><br><br>
-                        </div>
-                        
-
-                        <div class="Country">
-                            <label>Country</label>
-                            <select><option>-Select-</option></select>
-                        </div>
-
-                        <label for="email"><i class="fa fa-envelope"></i> Email<span class="colorStar">*</span></label>
-                        <input type="text" id="email" name="email">
-
-                        <label for="phone"><i class="fa fa-phone"></i> Phone Number<span class="colorStar">*</span></label>
-                        <input type="text" id="phone" name="email" >
-                    </div>
-
-                    <div class="col-50">
-                        <h3><ins>Lunch</ins></h3>
-                        <label for="cname">Mail Preference</label>
-                        <select type="text" id="cname" name="Select"><option>-Select-</option></select><br><br>
-                        <h3><ins>Payment Details</ins></h3>
-
-                        <label for="ccnum">Payment Mode</label>
-                        <input type="checkbox" name="Cash" /> Cash
-                        <input type="checkbox" name="Cheque" /> Cheque
-                        <input type="checkbox" name="DemandDraft" /> Demand Draft <br><br>
-
-                        <input type="text" id="ccnum" name="cardnumber">
-
-                        <label for="dd">DD/Cheque No</label>
-                        <input type="text" id="dd" name="expmonth">
-
-                        <label for="bankname">Drawn On(Bank Name)</label>
-                        <input type="text" id="bankname" name="expmonth">
-                        <label for="payable">Payable at</label>
-                        <input type="text" id="payable" name="expmonth">
-                    </div>
-                </div>
-                    <input type="submit" value="Reset" class="btn">
-                    <input type="submit" value="Submit" class="btn">
         </div>
-    </div>
-    
-    
-    
-</div>
+    </section>
+    <footer>
+        <div id="footdiv">
+            <input type="submit" class="last" id="last" value="submit"/>
+            <input type="reset" class="last" id="last" value="reset"/>
+        </div>
+    </footer>
+</form>
 
 </body>
+
 </html>
