@@ -5,32 +5,69 @@
     <link href="css/lab5.css" type="text/css" rel="stylesheet"/>
    </head>
 <body>
-    
-            <fieldset>
-                    <div class="row">
-                    <legend>Find maximum value of 2 numbers</legend> 
-                    <div class="column">
-                            <label>First Number:</label>    
-                            <label>Second number:</label> 
-                            <input type="button" value="Find Max" onclick="myResult.value=larger()" /><br/>
-                            
-                    </div>
-                    <div class="column">
-                            <input type="text" name="num1" placeholder="Input any number.."/><br/>
-                            <input type="text" name="num2"  placeholder="Input any number.."/><br/>
-                            <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
-                    </div>
-                </div>
-             </fieldset>
-    
+    <h1>
+        JavaScript Intro
+    </h1>
+    <h2>by Turtogtokh</h2>
+    <h3>987022</h3>
+    <div class="row">
+        <div class="leftdiv">
+                <fieldset>
+                        <legend>Find maximum value of 2 numbers</legend>     
+                              <div class="row">
+                                  <div class="column">
+                                          <label>First Number:</label></br>    
+                                          <label>Second number:</label> </br>
+                                          <input type="button" value="Find Max" onclick="myResult.value=larger()" /><br/>
+                                          
+                                  </div>
+                                  <div class="column">
+                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num2"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                  </div>
+                              </div>
+                  </fieldset> 
+        </div>
+        <div class="rightdiv">
+                <fieldset>
+                        <legend>Find maximum value of 3 numbers</legend>     
+                              <div class="row">
+                                  <div class="column">
+                                          <label>First Number:</label></br>    
+                                          <label>Second number:</label> </br>
+                                          <label>Third number:</label> </br>
+                                          <input type="button" value="Find Max" onclick="myResult.value=larger3()" /><br/>
+                                          
+                                  </div>
+                                  <div class="column">
+                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num2"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num3"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                  </div>
+                              </div>
+                  </fieldset> 
+            </div>
+    </div>
      
+   
 </body>
 <script>
-     function larger() {
+     function larger2() {
          var1 = parseInt(document.getElementsByName("num1")[0].value);
          var2 = parseInt(document.getElementsByName("num2")[0].value);
-         var max = var1>var2 ? var1 : var2;
-         return max;
+         if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+     }
+     function larger3() {
+         var1 = parseInt(document.getElementsByName("num1")[0].value);
+         var2 = parseInt(document.getElementsByName("num2")[0].value);
+         var2 = parseInt(document.getElementsByName("num3")[0].value);
+         return max(max(a, b), c);
      }
 </script>
 <footer>
