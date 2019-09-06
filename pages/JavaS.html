@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <title>JavaScript Example</title>
+   </head>
+<body>
+     <form>
+         <label>First number:</label> <input type="text" name="num1"/><br/>
+         <label>Second number:</label> <input type="text" name="num2"/><br/>
+         <input type="button" value="Compute" onclick="myResult.value=larger()"/>
+         <input type="text" name="result" id="myResult"/>
+     </form>
+</body>
+<script>
+     function larger() {
+         var1 = parseInt(document.getElementsByName("num1")[0].value);
+         var2 = parseInt(document.getElementsByName("num2")[0].value);
+         var max = var1>var2 ? var1 : var2;
+         return max;
+     }
+</script>
+<footer>
+        <p>
+                <a href="https://turtogtokh863.github.io/wap.github.io/index.html">
+                    return to home</br>
+                    <img src="https://turtogtokh863.github.io/wap.github.io/images/home.png" alt="return to home" width="120"/>
+                </a>
+        </p>  
+        <p>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="https://turtogtokh863.github.io/wap.github.io/images/w3c-html.png" alt="html validator">
+        </a>
+        </p>
+        <p>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validator">
+          </a>
+        </p>
+    </footer>
+</html>

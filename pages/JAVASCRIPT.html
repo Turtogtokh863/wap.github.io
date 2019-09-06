@@ -4,39 +4,37 @@
    </head>
    <body>
       <script type="text/javascript">
-
-        function max(firstNum,secondNum){
-            let max = 0;
-            if(firstNum>secondNum){
-                max = firstNum;
-                console.log(firstNum + "is max Number.");
-            } else {
-                max = secondNum;
-                console.log(secondNum + "is max Number.");
+function myFunctionTest(expected, function2test) {
+            let functionResult = function2test();
+            if (expected.constructor === Array) {
+                expected = expected.toString();
             }
-            return max;
-        }
-
-        max(142,3);
-
-        function myFunctionTest(expected, function2test) {
-            let result = function2test();
-            if(expected===result){
+            if (functionResult.constructor === Array) {
+                functionResult = functionResult.toString();
+            }
+            if (expected === functionResult) {
                 return "TEST SUCCEEDED";
             } else {
-                return "TEST FAILED.  Expected " + expected + " found " + function2test();
+                return "TEST FAILED.  Expected " + expected + " found " + functionResult;
             }
         }
-        console.log("Expected output of max(142,3) is 142  " + myFunctionTest(142, function () {
-            return max(142,3);
-        }));
-         
 
+        /* max returns the maximum of 2 arguments */
+        function max(a, b) {
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+        console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, function () {
+            return max(20, 10);
+        }));
     
       </script>
       <div class="container">
         <div class="max">
-
+            
         </div>
       </div>
    </body>
