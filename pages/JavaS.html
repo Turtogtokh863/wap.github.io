@@ -1,14 +1,29 @@
 <html>
    <head>
       <title>JavaScript Example</title>
+      <meta charset="utf-8">
+    <link href="css/lab5.css" type="text/css" rel="stylesheet"/>
    </head>
 <body>
-     <form>
-         <label>First number:</label> <input type="text" name="num1"/><br/>
-         <label>Second number:</label> <input type="text" name="num2"/><br/>
-         <input type="button" value="Compute" onclick="myResult.value=larger()"/>
-         <input type="text" name="result" id="myResult"/>
-     </form>
+    
+            <fieldset>
+                    <div class="row">
+                    <legend>Find maximum value of 2 numbers</legend> 
+                    <div class="column">
+                            <label>First Number:</label>    
+                            <label>Second number:</label> 
+                            <input type="button" value="Find Max" onclick="myResult.value=larger()" /><br/>
+                            
+                    </div>
+                    <div class="column">
+                            <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                            <input type="text" name="num2"  placeholder="Input any number.."/><br/>
+                            <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                    </div>
+                </div>
+             </fieldset>
+    
+     
 </body>
 <script>
      function larger() {

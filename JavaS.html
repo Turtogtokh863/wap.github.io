@@ -1,0 +1,91 @@
+<html>
+   <head>
+      <title>JavaScript Example</title>
+      <meta charset="utf-8">
+    <link href="css/lab5.css" type="text/css" rel="stylesheet"/>
+   </head>
+<body>
+    <h1>
+        JavaScript Intro
+    </h1>
+    <h2>by Turtogtokh</h2>
+    <h3>987022</h3>
+    <div class="row">
+        <div class="leftdiv">
+                <fieldset>
+                        <legend>Find maximum value of 2 numbers</legend>     
+                              <div class="row">
+                                  <div class="column">
+                                          <label>First Number:</label></br>    
+                                          <label>Second number:</label> </br>
+                                          <input type="button" value="Find Max" onclick="myResult.value=larger()" /><br/>
+                                          
+                                  </div>
+                                  <div class="column">
+                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num2"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                  </div>
+                              </div>
+                  </fieldset> 
+        </div>
+        <div class="rightdiv">
+                <fieldset>
+                        <legend>Find maximum value of 3 numbers</legend>     
+                              <div class="row">
+                                  <div class="column">
+                                          <label>First Number:</label></br>    
+                                          <label>Second number:</label> </br>
+                                          <label>Third number:</label> </br>
+                                          <input type="button" value="Find Max" onclick="myResult.value=larger3()" /><br/>
+                                          
+                                  </div>
+                                  <div class="column">
+                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num2"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num3"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                  </div>
+                              </div>
+                  </fieldset> 
+            </div>
+    </div>
+     
+   
+</body>
+<script>
+     function larger2() {
+         var1 = parseInt(document.getElementsByName("num1")[0].value);
+         var2 = parseInt(document.getElementsByName("num2")[0].value);
+         if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+     }
+     function larger3() {
+         var1 = parseInt(document.getElementsByName("num1")[0].value);
+         var2 = parseInt(document.getElementsByName("num2")[0].value);
+         var2 = parseInt(document.getElementsByName("num3")[0].value);
+         return max(max(a, b), c);
+     }
+</script>
+<footer>
+        <p>
+                <a href="https://turtogtokh863.github.io/wap.github.io/index.html">
+                    return to home</br>
+                    <img src="https://turtogtokh863.github.io/wap.github.io/images/home.png" alt="return to home" width="120"/>
+                </a>
+        </p>  
+        <p>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="https://turtogtokh863.github.io/wap.github.io/images/w3c-html.png" alt="html validator">
+        </a>
+        </p>
+        <p>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validator">
+          </a>
+        </p>
+    </footer>
+</html>
