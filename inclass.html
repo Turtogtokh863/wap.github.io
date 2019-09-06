@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title> Swapping image </title>
+    <script>
+        function swapImage(){
+            let imgDoc1 = document.getElementById("img1");
+            // let imgDoc2 = document.getElementById("img2");
+            // let tempSrc= imgDoc1.src;
+            // imgDoc1.src = imgDoc2.src;
+            // imgDoc2.src = imgDoc1.src;
+            if(imgDoc1.src.indexOf('happy.jpg')>-1){
+                img1.src='sad.jpg';
+            }else{
+                img1.src = 'happy.jpg';
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" src="images/sad.jpg" width="30%" height="30%">
+    <img id="img1" src="images/happy.jpg" width="30%" height="30%">
+    <button onclick="swapImage();">swap mood</button>
+</body>
+

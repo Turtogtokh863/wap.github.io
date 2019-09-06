@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <title>JavaScript Example</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+        function max(firstNum,secondNum){
+            if(firstNum>secondNum){
+                console.log(firstNum + "is max Number.");
+            } else {
+                console.log(secondNum + "is max Number.");
+            }
+            return;
+        }
+
+        max(142,3);
+
+        function myFunctionTest(expected, function2test) {
+            let result = function2test();
+            if(expected===result){
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + function2test();
+            }
+        }
+        console.log("Expected output of max(142,3) is 142  " + myFunctionTest(142, function () {
+            return max(142,3);
+        }));
+         
+
+    
+      </script>
+      <div class="container">
+        <div class="max">
+
+        </div>
+      </div>
+   </body>
+   <footer>
+        <p>
+                <a href="https://turtogtokh863.github.io/wap.github.io/index.html">
+                    return to home</br>
+                    <img src="https://turtogtokh863.github.io/wap.github.io/images/home.png" alt="return to home" width="120"/>
+                </a>
+        </p>  
+        <p>
+        <a href="https://validator.w3.org/check/referer">
+            <img src="https://turtogtokh863.github.io/wap.github.io/images/w3c-html.png" alt="html validator">
+        </a>
+        </p>
+        <p>
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validator">
+          </a>
+        </p>
+    </footer>
+</html>
