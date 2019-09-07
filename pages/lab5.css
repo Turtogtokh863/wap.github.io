@@ -1,0 +1,80 @@
+.intro{
+  align-content: center;
+}
+.column {
+    float: left;
+    width: 50%;
+    min-height: 220px;
+  }
+  input{
+  border: none;
+  margin-bottom: 15px;
+  padding: 4px;
+  color: white;
+  background: black;
+  }
+  input[type="textResult" i]{
+    background-color: #eee;
+    cursor: not-allowed;
+    color: #555;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    outline: none;
+    pointer-events: none;
+    -moz-user-select: none;
+    
+  }
+  input[type="button" i] {
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: yellow;
+    background-color: blue;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: red;
+    border-image: initial;
+}
+
+fieldset {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 25px 15px;
+    color: aqua;
+    font-size: 16px;
+    margin: 10px;
+}
+  label{
+    border: none;
+  margin-bottom: 15px;
+  padding: 4px;
+  color: white;
+  background: black;
+  }
+.row{
+    background: black;
+  }
+  fieldset{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 25px 15px;
+    color: aqua;
+    font-size: 16px;
+    margin: 10px;
+    
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

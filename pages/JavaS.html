@@ -2,29 +2,36 @@
    <head>
       <title>JavaScript Example</title>
       <meta charset="utf-8">
-    <link href="https://turtogtokh863.github.io/wap.github.io/css/lab5.css" type="text/css" rel="stylesheet"/>
+    <link href="lab5.css" type="text/css" rel="stylesheet"/>
    </head>
 <body>
-    <h1>
-        JavaScript Intro
-    </h1>
-    <h2>by Turtogtokh</h2>
-    <h3>987022</h3>
+    <div class="intro">
+            <h1>
+                    JavaScript Intro
+                </h1>
+                <h2>by Turtogtokh</h2>
+                <h3>987022</h3>
+    </div>
+    
     <div class="row">
         <div class="column">
                 <fieldset>
                         <legend>Find maximum value of 2 numbers</legend>     
                               <div class="row">
                                   <div class="column">
-                                          <label>First Number:</label></br>    
-                                          <label>Second number:</label> </br>
-                                          <input type="button" value="Find Max" onclick="myResult.value=larger()" /><br/>
+                                          <label>First Number:</label></br></br>    
+                                          <label>Second number:</label></br></br>
+                                          <input type="button" value="Find Max" onclick="larger2()" /><br/><br/>
+                                          <input type="button" value="Resetx" onclick="reset1()" /><br/>
                                           
                                   </div>
                                   <div class="column">
-                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
+                                          <input type="number" name="num1" placeholder="Input any number.."/><br/>
                                           <input type="text" name="num2"  placeholder="Input any number.."/><br/>
-                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                          <input type="textResult" name="result1" id="myResult" placeholder="Max value"/>
+                                          <div>
+                                              Last max value: <span id="lastmax"></span>
+                                          </div>
                                   </div>
                               </div>
                   </fieldset> 
@@ -34,41 +41,188 @@
                         <legend>Find maximum value of 3 numbers</legend>     
                               <div class="row">
                                   <div class="column">
-                                          <label>First Number:</label></br>    
-                                          <label>Second number:</label> </br>
-                                          <label>Third number:</label> </br>
-                                          <input type="button" value="Find Max" onclick="myResult.value=larger3()" /><br/>
+                                          <label>First Number:</label></br></br>    
+                                          <label>Second number:</label></br></br>
+                                          <label>Third number:</label></br></br>
+                                          <input type="button" value="Find Max" onclick="myResult.value=larger3()" /><br/><br/>
+                                          <input type="button" value="ResetX" onclick="reset2()" />
                                           
                                   </div>
                                   <div class="column">
-                                          <input type="text" name="num1" placeholder="Input any number.."/><br/>
-                                          <input type="text" name="num2"  placeholder="Input any number.."/><br/>
-                                          <input type="text" name="num3"  placeholder="Input any number.."/><br/>
-                                          <input type="text" name="result" id="myResult" placeholder="Max value will be placed here.."/>
+                                          <input type="text" name="num11" placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num12"  placeholder="Input any number.."/><br/>
+                                          <input type="text" name="num13"  placeholder="Input any number.."/><br/>
+                                          <input type="textResult" name="result2" id="myResult" placeholder="Max value"/>
+                                          <div>
+                                                Last max value: <span id="lastmax2"></span>
+                                          </div>
                                   </div>
                               </div>
                   </fieldset> 
             </div>
+            <div class="column">
+                    <fieldset>
+                            <legend>Check if character is vowel or NOT</legend>     
+                                  <div class="row">
+                                      <div class="column">
+                                              <label>Character:</label></br></br>
+                                              <input type="button" value="Check" onclick="myCharResult.value=vowel()" /><br/><br/>
+                                              <input type="button" value="ResetX" onclick="resetChar()" />
+                                              
+                                      </div>
+                                      <div class="column">
+                                              <input type="text" name="charReturn"  placeholder="Input single character.."/><br/>
+                                              <input type="textResult" name="result2" id="myCharResult" placeholder="..."/>
+                                      </div>
+                                  </div>
+                      </fieldset> 
+    
+            </div>
+            <div class="column">
+                    <fieldset>
+                            <legend>Find SUM and Multiply of numbers in array</legend>     
+                                  <div class="row">
+                                      <div class="column">
+                                            <input type="number" id="text1" placeholder="enter number"></input>
+                                            <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+                                            <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+                                            <input type="button" id="button3" value="SUM" onclick="mySUMResult.value=sum()" ></input>
+                                            <input type="button" id="button4" value="Multiply" onclick="multiply_array();"></input>
+                                            <input type="textResult" name="resultSUM2" id="mySUMResult" placeholder="..."/>
+                                            <div id="Result"></div> 
+                                      </div>
+                                  </div>
+                      </fieldset> 
+            </div>
+    </div>
+    <div class ="row">
+        
     </div>
      
    
 </body>
 <script>
-     function larger2() {
-         var1 = parseInt(document.getElementsByName("num1")[0].value);
-         var2 = parseInt(document.getElementsByName("num2")[0].value);
-         if (a > b) {
-                return a;
-            } else {
-                return b;
+
+function myFunctionTest(expected, function2test) {
+            var functionResult = function2test();
+            if (expected.constructor === Array) {
+                expected = expected.toString();
             }
+            if (functionResult.constructor === Array) {
+                functionResult = functionResult.toString();
+            }
+            if (expected === functionResult) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + functionResult;
+            }
+        }
+
+var x = 0;
+var array = Array();
+
+function add_element_to_array()
+{
+ array[x] = document.getElementById("text1").value;
+ x++;
+ document.getElementById("text1").value = "";
+}
+
+function display_array()
+{
+   var e = "<hr/>";   
+    
+   for (var y=0; y<array.length; y++)
+   {
+     e += "Element " + y + " = " + array[y] + "<br/>";
+   }
+   document.getElementById("Result").innerHTML = e;
+}
+
+function sum(numArray) {
+            let sum = 0;
+            var realArrayLength = numArray.length + 1 ;
+            for (let i = 0; i<= realArrayLength; i++) {
+                sum += numArray[i];
+            }
+            sum=document.getElementsByName("resultSUM2")[0].value=sum;
+            return sum;
+        }
+
+    function max(a,b) {
+        return a > b ? a : b
+    }
+    function vowel(){
+        character = document.getElementsByName('charReturn')[0].value;
+        return (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u');
+    }
+    console.log("Expected output of Vowel(a) is true  " + myFunctionTest(true, function () {
+            return vowel('a');
+        }));
+
+
+    function setLastMax(max) {
+        document.getElementById('lastmax').innerHTML = '<strong>'+max+'</strong>';
+    }
+    function setLastMax2(max) {
+        document.getElementById('lastmax2').innerHTML = '<strong>'+max+'</strong>';
+    }
+    
+
+    function reset1(){
+
+        setLastMax(document.getElementsByName("result1")[0].value);
+        document.getElementsByName("num1")[0].value='';
+        document.getElementsByName("num2")[0].value='';
+        document.getElementsByName("result1")[0].value='';
+    }
+    function reset2(){
+
+        setLastMax2(document.getElementsByName("result2")[0].value);
+        document.getElementsByName("num11")[0].value='';
+        document.getElementsByName("num12")[0].value='';
+        document.getElementsByName("num13")[0].value='';
+        document.getElementsByName("result2")[0].value='';
+        }
+    function resetChar(){
+        document.getElementsByName("charReturn")[0].value='';
+    }
+     function larger2() {
+         a = parseInt(document.getElementsByName("num1")[0].value);
+         b = parseInt(document.getElementsByName("num2")[0].value);
+         if(!a || !b) {
+            alert("Input not valid!");
+            return;
+         }
+         
+         if(a===b){
+            document.getElementsByName("result1")[0].value = "both arguments equal!!!";
+            return;
+         }
+         
+         document.getElementsByName("result1")[0].value=max(a, b);
+
      }
+     console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, function () {
+            return larger2(20, 10);
+        }));
+
      function larger3() {
-         var1 = parseInt(document.getElementsByName("num1")[0].value);
-         var2 = parseInt(document.getElementsByName("num2")[0].value);
-         var2 = parseInt(document.getElementsByName("num3")[0].value);
-         return max(max(a, b), c);
+         a = parseInt(document.getElementsByName("num11")[0].value);
+         b = parseInt(document.getElementsByName("num12")[0].value);
+         c = parseInt(document.getElementsByName("num13")[0].value);
+         document.getElementsByName("result2")[0].value=max(max(a, b),c);       
      }
+     console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, function () {
+            return larger3(5, 4, 44);
+        }));
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, function () {
+            return larger3(55, 4, 44);
+        }));
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, function () {
+            return larger3(55, 4, 44);
+        }));
+
 </script>
 <footer>
         <p>

@@ -3,8 +3,9 @@
       <title>JavaScript Example</title>
    </head>
    <body>
-      <script type="text/javascript">
-function myFunctionTest(expected, function2test) {
+      <script>
+          
+      function myFunctionTest(expected, function2test) {
             let functionResult = function2test();
             if (expected.constructor === Array) {
                 expected = expected.toString();
@@ -18,7 +19,6 @@ function myFunctionTest(expected, function2test) {
                 return "TEST FAILED.  Expected " + expected + " found " + functionResult;
             }
         }
-
         /* max returns the maximum of 2 arguments */
         function max(a, b) {
             if (a > b) {
@@ -30,7 +30,123 @@ function myFunctionTest(expected, function2test) {
         console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, function () {
             return max(20, 10);
         }));
-    
+        /* max3 takes 3 numbers as arguments and returns the largest */
+        function maxOfThree(a, b, c) {
+            return max(max(a, b), c);
+        }
+        console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, function () {
+            return maxOfThree(5, 4, 44);
+        }));
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, function () {
+            return maxOfThree(55, 4, 44);
+        }));
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, function () {
+            return maxOfThree(55, 4, 44);
+        }));
+        /*
+        returns true if character is a vowel
+         */
+        function isVowel(character) {
+            return (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u');
+        }
+        console.log("Expected output of isVowel(a) is true  " + myFunctionTest(true, function () {
+            return isVowel('a');
+        }));
+        /*
+        returns sum of array numbers (number arrays only)
+         */
+        function sum(numArray) {
+            if (numArray.constructor !== Array) return 0;
+            if (numArray.length === 0) {
+                return 0;
+            }
+            let sum = 0;
+            for (let i = 0; i<numArray.length; i++) {
+                sum += numArray[i];
+            }
+            return sum;
+        }
+        console.log("Expected output of sum([1, 2, 3, 4]) is 10  " + myFunctionTest(10, function () {
+            return sum([1, 2, 3, 4]);
+        }));
+        /*
+        returns multiplication of array numbers (number arrays only)
+         */
+        function multiply(numArray) {
+            if (numArray.constructor !== Array) return 0;
+            if (numArray.length === 0) {
+                return 0;
+            }
+            let multiplication = 1;
+            for (let i = 0; i<numArray.length; i++) {
+                multiplication = multiplication * numArray[i];
+            }
+            return multiplication;
+        }
+        console.log("Expected output of multiply([1, 2, 3, 4]) is 24  " + myFunctionTest(24, function () {
+            return multiply([1, 2, 3, 4]);
+        }));
+        /*
+        returns reverse of given string
+         */
+        function reverse(str) {
+            if (typeof str != "string") return str;
+            return str.split("").reverse().join("");
+        }
+        console.log("Expected output of reverse('bad') is dab  " + myFunctionTest("dab", function () {
+            return reverse("bad");
+        }));
+        /*
+        returns the longest word from string array
+         */
+        function findLongestWord(strArray) {
+            if (strArray.length === 0) return 0;
+            if (typeof strArray[0] != "string") return 0;
+            let longestWord = strArray[0];
+            for (let i = 1; i<strArray.length; i++) {
+                if (longestWord.length < strArray[i].length) {
+                    longestWord = strArray[i];
+                }
+            }
+            return longestWord;
+        }
+        console.log("Expected output of findLongestWord(['bad', 'crazy', 'mad']) is crazy  " + myFunctionTest("crazy", function () {
+            return findLongestWord(['bad', 'crazy', 'mad']);
+        }));
+        /*
+        returns words with more length than given number value
+        */
+        function filterLongWords(strArray, num) {
+            if (strArray.length === 0) return 0;
+            if (typeof strArray[0] != "string") return 0;
+            let longWords = [];
+            for (let i=0;i<strArray.length;i++) {
+                if (strArray[i].length > num) {
+                    longWords.push(strArray[i]);
+                }
+            }
+            return longWords;
+        }
+        console.log("Expected output of filterLongWords(['bad', 'crazy', 'mad'], 2) is ['bad', 'crazy', 'mad']  " + myFunctionTest(['bad', 'crazy', 'mad'], function () {
+            return filterLongWords(['bad', 'crazy', 'mad'], 2);
+        }));
+        const a = [1,3,5,3,3];
+        const b = a.map(function(elem, i, array) {
+            return elem * 10;
+        });
+        console.log(b);
+        const c = a.filter(function(elem, i, array){
+            return elem === 3;});
+        console.log(c);
+        const d = a.reduce(function(prevValue, elem, i, array){
+            return prevValue + elem;
+        });
+        console.log(d);
+        const d2 = a.find(function(elem) {return elem > 1;}); //3
+        const d3 = a.findIndex(function(elem) {return elem > 1;}); //1
+        console.log(d2);
+        console.log(d3);
+    </script>
       </script>
       <div class="container">
         <div class="max">
