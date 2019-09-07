@@ -1,11 +1,11 @@
-<html>
-   <head>
-      <title>JavaScript Example</title>
-   </head>
-   <body>
-      <script>
-          
-      function myFunctionTest(expected, function2test) {
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myFunctionTest(expected, function2test) {
             let functionResult = function2test();
             if (expected.constructor === Array) {
                 expected = expected.toString();
@@ -19,7 +19,6 @@
                 return "TEST FAILED.  Expected " + expected + " found " + functionResult;
             }
         }
-        /* max returns the maximum of 2 arguments */
         function max(a, b) {
             if (a > b) {
                 return a;
@@ -27,15 +26,14 @@
                 return b;
             }
         }
-        console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, function () {
-            return max(20, 10);
+        console.log("Expected output of max(22,12) is 22  " + myFunctionTest(22, function () {
+            return max(22, 10);
         }));
-        /* max3 takes 3 numbers as arguments and returns the largest */
         function maxOfThree(a, b, c) {
             return max(max(a, b), c);
         }
-        console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, function () {
-            return maxOfThree(5, 4, 44);
+        console.log("Expected output of maxOfThree(51,48,4) is 51  " + myFunctionTest(44, function () {
+            return maxOfThree(51, 48, 4);
         }));
         console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, function () {
             return maxOfThree(55, 4, 44);
@@ -43,18 +41,12 @@
         console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, function () {
             return maxOfThree(55, 4, 44);
         }));
-        /*
-        returns true if character is a vowel
-         */
         function isVowel(character) {
             return (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u');
         }
         console.log("Expected output of isVowel(a) is true  " + myFunctionTest(true, function () {
             return isVowel('a');
         }));
-        /*
-        returns sum of array numbers (number arrays only)
-         */
         function sum(numArray) {
             if (numArray.constructor !== Array) return 0;
             if (numArray.length === 0) {
@@ -69,9 +61,6 @@
         console.log("Expected output of sum([1, 2, 3, 4]) is 10  " + myFunctionTest(10, function () {
             return sum([1, 2, 3, 4]);
         }));
-        /*
-        returns multiplication of array numbers (number arrays only)
-         */
         function multiply(numArray) {
             if (numArray.constructor !== Array) return 0;
             if (numArray.length === 0) {
@@ -86,9 +75,6 @@
         console.log("Expected output of multiply([1, 2, 3, 4]) is 24  " + myFunctionTest(24, function () {
             return multiply([1, 2, 3, 4]);
         }));
-        /*
-        returns reverse of given string
-         */
         function reverse(str) {
             if (typeof str != "string") return str;
             return str.split("").reverse().join("");
@@ -96,9 +82,6 @@
         console.log("Expected output of reverse('bad') is dab  " + myFunctionTest("dab", function () {
             return reverse("bad");
         }));
-        /*
-        returns the longest word from string array
-         */
         function findLongestWord(strArray) {
             if (strArray.length === 0) return 0;
             if (typeof strArray[0] != "string") return 0;
@@ -113,9 +96,6 @@
         console.log("Expected output of findLongestWord(['bad', 'crazy', 'mad']) is crazy  " + myFunctionTest("crazy", function () {
             return findLongestWord(['bad', 'crazy', 'mad']);
         }));
-        /*
-        returns words with more length than given number value
-        */
         function filterLongWords(strArray, num) {
             if (strArray.length === 0) return 0;
             if (typeof strArray[0] != "string") return 0;
@@ -147,29 +127,10 @@
         console.log(d2);
         console.log(d3);
     </script>
-      </script>
-      <div class="container">
-        <div class="max">
-            
-        </div>
-      </div>
-   </body>
-   <footer>
-        <p>
-                <a href="https://turtogtokh863.github.io/wap.github.io/index.html">
-                    return to home</br>
-                    <img src="https://turtogtokh863.github.io/wap.github.io/images/home.png" alt="return to home" width="120"/>
-                </a>
-        </p>  
-        <p>
-        <a href="https://validator.w3.org/check/referer">
-            <img src="https://turtogtokh863.github.io/wap.github.io/images/w3c-html.png" alt="html validator">
-        </a>
-        </p>
-        <p>
-          <a href="https://jigsaw.w3.org/css-validator/check/referer">
-            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validator">
-          </a>
-        </p>
-    </footer>
+</head>
+<body>
+
+Look in the Chrome developer console to see the output. CTRL_SHIFT_J
+
+</body>
 </html>
