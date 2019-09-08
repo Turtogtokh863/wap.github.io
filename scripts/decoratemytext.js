@@ -32,7 +32,7 @@ function bling() {
     var area = document.getElementById("txt");
     var chk = document.getElementById("bling");
     if (chk.checked) {
-        document.body.style.backgroundImage = "url('http://www.sondracelli.com/images/p-bg.jpg')";
+        document.body.style.backgroundImage = "url('http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
         area.style.fontWeight = 900;
         area.style.color = "green";
         area.style.textDecoration = "underline";
