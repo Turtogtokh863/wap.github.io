@@ -1,10 +1,10 @@
 window.onload = function () {
     let txt = document.getElementById("big");
-
     let bol = 1;
     let inter;
 
     function big() {
+        alert("Hello World");
         if (bol === 1) {
             inter = setInterval(bigger, 500);
             bol = 2;
@@ -32,7 +32,7 @@ function bling() {
     var area = document.getElementById("txt");
     var chk = document.getElementById("bling");
     if (chk.checked) {
-        document.body.style.backgroundImage = "url('https://courses.cs.washington.edu/courses/cse190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
+        document.body.style.backgroundImage = "url('http://www.sondracelli.com/images/p-bg.jpg')";
         area.style.fontWeight = 900;
         area.style.color = "green";
         area.style.textDecoration = "underline";
