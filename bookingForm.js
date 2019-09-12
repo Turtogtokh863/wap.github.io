@@ -11,17 +11,22 @@ $(function(){
     const street = $('#street').val();
     const zipcode = $('#zipcode').val();
     const seat = $('input[name="seats"]').val() ;
-    
+    $("input").removeClass('error');
+
+     
     if(name === '' ) {
         $('#errors').css('background', '#ffdddd');
         $('#errors').append('Name must be longer than 1 character. <br/>');
-        color: red;
+        $('#name').addClass('error');
       submitFlag = false;
     }
     
     if(street === ''){
         $('#errors').append('Street cannot be null. <br/>');
         street.css("border-color", "red");
+
+        $
+
       submitFlag = false;
     }
     if(state === ''){
@@ -57,10 +62,13 @@ $(function(){
     }
  
  		if(submitFlag){
-    	this.submit();
+        this.submit();
+        
     }
     
   });
 
 });
+
+
 
