@@ -53,11 +53,6 @@ div.youlose {
 	background-color: #ff8888;
 }
 
-/*
-Hack hack hack; these are CSS "sibling selectors" for selecting
-neighboring elements.  Necessary to avoid giving ids to the boundary divs
-*/
-
 #maze div.boundary {
 	position: absolute;
 	
