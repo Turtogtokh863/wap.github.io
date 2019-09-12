@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    <title> Web Application Programming - Index </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bookingForm.js"></script>
+    
+</head>
+<body>
+   <div class="container">
+    <header>
+        <h1>Maharishi University</h1>
+        <h2>Department of <strong>Computer Science</strong></h2>
+        <h3><em>WAP Course</em></h3>
+    <img src="images/tukker.jpg" alt="Turtogtokh" width="270" class="center">
+    <h1>
+        Turtogtokh Munkhtsooj
+    </h1>
+    </header>
+    <form id="bookingForm">
+        <div id="errors">
+        
+        </div>
+        <fieldset>
+            <legend>
+                Form Submission
+            </legend>
+            <p>
+                Name:
+                <input type="text" name="name" id="name" pattern="[a-zA-z]+">
+              </p>
+              <p>Street:
+                <input type="text" name="street" id="street">
+              </p>
+              <p>State:
+              <select id="state">
+              <option value="">Select One</option>
+              <option value="IA" >Iowa</option>
+              <option value="CA" >California</option>
+              <option value="CA" >Ohio</option>
+              </select>
+              </p>
+              <p>Zip Code:
+                <input type="text" name="zipcode" id="zipcode" pattern="[0-9]{5}" title="Must be 5 digit" >
+              </p>
+              <p>How many seats?
+                <input type="text" name="seats">
+              </p>
+        </fieldset>
+       <fieldset name="taxi" >
+          <legend>Which taxi do you require?</legend>
+          <input type="radio" name="taxi" value="car" > Car<br>
+          <input type="radio" name="taxi" value="van" > Van<br>
+          <input type="radio" name="taxi" value="tuk" > Tuk Tuk
+        </fieldset>
+      
+         <fieldset name="Extras" >
+          <legend>Extras</legend>
+           <input type="checkbox" name="Extras" value="baby" > Baby Seat<br>
+          <input type="checkbox" name="Extras" value="wheelchair" >Wheelchair Access<br>
+          <input type="checkbox" name="Extras" value="stock" >Stock Tip<br>
+        </fieldset>
+      
+        <p>
+        Special Instructions:
+        <textarea rows="3" columns="10"></textarea>
+        </p>
+        
+        <input type="submit" value="Submit Booking" />
+      
+      </form>
+      
+    <footer>
+        <p>
+            <a href="https://turtogtokh863.github.io/wap.github.io/index.html">return to home</br>
+                <img src="https://turtogtokh863.github.io/wap.github.io/images/home.png" alt="return to home" width="120"/>
+            </a>
+        </p>  
+        <p>
+            <a href="https://validator.w3.org/check/referer">
+                <img src="https://turtogtokh863.github.io/wap.github.io/images/w3c-html.png" alt="html validator">
+            </a>
+        </p>
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="css validator">
+            </a>
+        </p>
+    </footer>
+</div>
+ </body>
+</html>
